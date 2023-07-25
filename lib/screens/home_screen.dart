@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mob_flix/widgets/card_title.dart';
 import 'package:mob_flix/widgets/category_list.dart';
 import 'package:mob_flix/widgets/highlight.dart';
 
@@ -19,9 +20,14 @@ class HomeScreen extends StatelessWidget {
                 Highlight(),
                 SizedBox(height: 30.0),
                 CategoryList(),
+                SizedBox(height: 30.0),
+                CardTitle(),
+                CardTitle(),
+                CardTitle(),
+                CardTitle(),
               ],
             ),
-          )
+          ),
         ],
       ),
     );
