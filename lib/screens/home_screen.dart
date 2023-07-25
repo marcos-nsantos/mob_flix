@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mob_flix/widgets/card_title.dart';
-import 'package:mob_flix/widgets/category_button.dart';
 import 'package:mob_flix/widgets/category_list.dart';
 import 'package:mob_flix/widgets/highlight.dart';
 
@@ -34,7 +33,7 @@ class HomeScreen extends StatelessWidget {
                 CardTitle(
                   title: 'assets/images/invincible.jpg',
                 ),
-                SizedBox(height: 40.0),
+                SizedBox(height: 70.0),
               ],
             ),
           ),
