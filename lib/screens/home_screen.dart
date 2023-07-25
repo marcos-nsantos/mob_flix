@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mob_flix/widgets/category_list.dart';
 import 'package:mob_flix/widgets/highlight.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -10,9 +11,17 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('MOBFLIX'),
       ),
-      body: const Column(
+      body: Column(
         children: [
-          Highlight(),
+          Expanded(
+            child: ListView(
+              children: const [
+                Highlight(),
+                SizedBox(height: 30.0),
+                CategoryList(),
+              ],
+            ),
+          )
         ],
       ),
     );
