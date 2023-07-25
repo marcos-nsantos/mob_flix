@@ -23,17 +23,15 @@ class CategoryList extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 40.0,
-      child: Expanded(
-        child: ListView.separated(
-          scrollDirection: Axis.horizontal,
-          itemBuilder: (BuildContext context, int index) {
-            return categoryList[index];
-          },
-          separatorBuilder: (BuildContext context, int index) {
-            return const SizedBox(width: 15.0);
-          },
-          itemCount: categoryList.length,
-        ),
+      child: ListView.separated(
+        scrollDirection: Axis.horizontal,
+        itemBuilder: (BuildContext context, int index) {
+          return categoryList[index];
+        },
+        separatorBuilder: (BuildContext context, int index) {
+          return const SizedBox(width: 15.0);
+        },
+        itemCount: categoryList.length,
       ),
     );
   }
