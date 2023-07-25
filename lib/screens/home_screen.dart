@@ -22,15 +22,31 @@ class HomeScreen extends StatelessWidget {
                 SizedBox(height: 30.0),
                 CategoryList(),
                 SizedBox(height: 30.0),
-                CardTitle(title: 'assets/images/the-mandalorian.jpg',),
-                CardTitle(title: 'assets/images/invincible.jpg',),
-                CardTitle(title: 'assets/images/the-mandalorian.jpg',),
-                CardTitle(title: 'assets/images/invincible.jpg',),
+                CardTitle(
+                  title: 'assets/images/the-mandalorian.jpg',
+                ),
+                CardTitle(
+                  title: 'assets/images/invincible.jpg',
+                ),
+                CardTitle(
+                  title: 'assets/images/the-mandalorian.jpg',
+                ),
+                CardTitle(
+                  title: 'assets/images/invincible.jpg',
+                ),
                 SizedBox(height: 40.0),
               ],
             ),
           ),
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.deepPurpleAccent,
+        onPressed: () {},
+        child: const Icon(
+          Icons.add,
+          color: Colors.white,
+        ),
       ),
     );
   }
