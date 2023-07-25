@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mob_flix/widgets/category_button.dart';
 
 List<dynamic> categoryList = const [
-  SizedBox(width: 30.0),
+  SizedBox(width: 5.0),
   CategoryButton(name: 'Ação', color: Color.fromARGB(255, 6, 119, 211)),
   CategoryButton(name: 'Comédia', color: Color.fromARGB(255, 245, 108, 4)),
   CategoryButton(name: 'Drama', color: Color.fromARGB(255, 98, 128, 143)),
