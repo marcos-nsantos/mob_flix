@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class CardTitle extends StatelessWidget {
-  const CardTitle({super.key});
+  final String title;
+
+  const CardTitle({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -13,6 +15,13 @@ class CardTitle extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20.0),
           color: Colors.grey,
+        ),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(20.0),
+          child: Image.asset(
+            title,
+            fit: BoxFit.fill,
+          ),
         ),
       ),
     );
