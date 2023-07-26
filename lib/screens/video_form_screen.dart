@@ -31,9 +31,15 @@ class _VideoFormScreenState extends State<VideoFormScreen> {
           child: ListView(
             children: const [
               TextInputLabel(
-                label: 'URL',
+                label: 'URL:',
                 hintText: 'https://www.youtube.com/watch?...',
                 keyboardType: TextInputType.url,
+              ),
+              SizedBox(height: 30),
+              TextInputLabel(
+                label: 'Categoria:',
+                hintText: 'Ação, Comédia, Drama, Terror...',
+                keyboardType: TextInputType.text,
               ),
             ],
           ),
