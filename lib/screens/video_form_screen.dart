@@ -30,7 +30,11 @@ class _VideoFormScreenState extends State<VideoFormScreen> {
           margin: const EdgeInsets.all(28.0),
           child: ListView(
             children: const [
-              TextInputLabel(),
+              TextInputLabel(
+                label: 'URL',
+                hintText: 'https://www.youtube.com/watch?...',
+                keyboardType: TextInputType.url,
+              ),
             ],
           ),
         ),
