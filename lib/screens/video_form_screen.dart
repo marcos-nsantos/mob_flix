@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mob_flix/widgets/text_input_label.dart';
+import 'package:mob_flix/widgets/video_preview.dart';
 
 class VideoFormScreen extends StatefulWidget {
   const VideoFormScreen({super.key});
@@ -10,6 +11,9 @@ class VideoFormScreen extends StatefulWidget {
 
 class _VideoFormScreenState extends State<VideoFormScreen> {
   final _formKey = GlobalKey<FormState>();
+
+  final TextEditingController _urlController = TextEditingController();
+  final TextEditingController _categoryController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -29,17 +33,26 @@ class _VideoFormScreenState extends State<VideoFormScreen> {
         child: Container(
           margin: const EdgeInsets.all(28.0),
           child: ListView(
-            children: const [
+            children: [
               TextInputLabel(
                 label: 'URL:',
                 hintText: 'https://www.youtube.com/watch?...',
                 keyboardType: TextInputType.url,
+                controller: _urlController,
+                onChanged: (value) {
+                  setState(() {});
+                },
               ),
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
               TextInputLabel(
                 label: 'Categoria:',
                 hintText: 'Ação, Comédia, Drama, Terror...',
                 keyboardType: TextInputType.text,
+                controller: _categoryController,
+              ),
+              const SizedBox(height: 40),
+              VideoPreview(
+                url: _urlController.text,
               ),
             ],
           ),
