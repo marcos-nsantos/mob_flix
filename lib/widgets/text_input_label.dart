@@ -4,12 +4,16 @@ class TextInputLabel extends StatelessWidget {
   final String label;
   final String? hintText;
   final TextInputType? keyboardType;
+  final TextEditingController? controller;
+  final Function(String)? onChanged;
 
   const TextInputLabel({
     super.key,
     required this.label,
     this.hintText,
     this.keyboardType,
+    this.onChanged,
+    this.controller,
   });
 
   @override
@@ -30,6 +34,8 @@ class TextInputLabel extends StatelessWidget {
           height: 10,
         ),
         TextFormField(
+          controller: controller,
+          onChanged: onChanged,
           keyboardType: keyboardType,
           decoration: InputDecoration(
             border: const OutlineInputBorder(
