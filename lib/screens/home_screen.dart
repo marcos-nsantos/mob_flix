@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mob_flix/screens/video_form.dart';
+import 'package:mob_flix/screens/video_form_screen.dart';
 import 'package:mob_flix/widgets/card_title.dart';
 import 'package:mob_flix/widgets/category_list.dart';
 import 'package:mob_flix/widgets/highlight.dart';
@@ -44,7 +44,7 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: Colors.deepPurpleAccent,
         onPressed: () {
           Navigator.push(context, MaterialPageRoute(builder: (context) {
-            return const VideoForm();
+            return const VideoFormScreen();
           }));
         },
         child: const Icon(
