@@ -54,6 +54,20 @@ class _VideoFormScreenState extends State<VideoFormScreen> {
               VideoPreview(
                 url: _urlController.text,
               ),
+              const SizedBox(height: 45),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 30,
+                    vertical: 20,
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
+                onPressed: () {},
+                child: const Text('Cadastrar', style: TextStyle(fontSize: 16)),
+              ),
             ],
           ),
         ),
