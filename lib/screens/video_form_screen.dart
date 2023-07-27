@@ -31,9 +31,9 @@ class _VideoFormScreenState extends State<VideoFormScreen> {
       ),
       body: Form(
         key: _formKey,
-        child: Container(
-          margin: const EdgeInsets.all(28.0),
-          child: ListView(
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.all(28.0),
+          child: Column(
             children: [
               TextInputLabel(
                 label: 'URL:',
@@ -46,7 +46,7 @@ class _VideoFormScreenState extends State<VideoFormScreen> {
               ),
               const SizedBox(height: 30),
               const DropdownFormButton(
-                label: 'Categoria',
+                label: 'Categoria:',
               ),
               const SizedBox(height: 40),
               VideoPreview(
@@ -56,7 +56,7 @@ class _VideoFormScreenState extends State<VideoFormScreen> {
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   padding: const EdgeInsets.symmetric(
-                    horizontal: 30,
+                    horizontal: 40,
                     vertical: 20,
                   ),
                   shape: RoundedRectangleBorder(
@@ -64,7 +64,10 @@ class _VideoFormScreenState extends State<VideoFormScreen> {
                   ),
                 ),
                 onPressed: () {},
-                child: const Text('Cadastrar', style: TextStyle(fontSize: 16)),
+                child: const Text(
+                  'Cadastrar',
+                  style: TextStyle(fontSize: 16),
+                ),
               ),
             ],
           ),
