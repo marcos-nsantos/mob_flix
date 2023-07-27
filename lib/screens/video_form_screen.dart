@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mob_flix/widgets/dropdown_form_button.dart';
 import 'package:mob_flix/widgets/text_input_label.dart';
 import 'package:mob_flix/widgets/video_preview.dart';
 
@@ -44,11 +45,8 @@ class _VideoFormScreenState extends State<VideoFormScreen> {
                 },
               ),
               const SizedBox(height: 30),
-              TextInputLabel(
-                label: 'Categoria:',
-                hintText: 'Ação, Comédia, Drama, Terror...',
-                keyboardType: TextInputType.text,
-                controller: _categoryController,
+              const DropdownFormButton(
+                label: 'Categoria',
               ),
               const SizedBox(height: 40),
               VideoPreview(
